@@ -1,76 +1,89 @@
 export const personalInfo = {
   name: "Gaurav Dharmadhikari",
   title: "",
-  tagline: "A passionate full-stack developer crafting beautiful and functional web experiences.",
+  tagline: "",
   email: "john.doe@example.com",
   social: {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-    email: "mailto:john.doe@example.com"
+    github: "https://github.com/gauravd12345",
+    linkedin: "https://www.linkedin.com/in/gaurav-dharmadhikari/",
+    email: "mailto:gauravdharmadhikari2@gmail.com"
   }
 };
 
 export const aboutMe = {
   paragraphs: [
-    "I'm a full-stack developer with over 5 years of experience building web applications. I specialize in React, Node.js, and modern web technologies. I'm passionate about creating clean, efficient code and delivering exceptional user experiences.",
-    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community."
+    "I'm an embedded software developer with an interest in firmware and embedded systems. I specialize in React, Node.js, and modern web technologies. I'm passionate about creating clean, efficient code and delivering exceptional user experiences.",
+    "When I'm not coding, you can find me watching movies, playing guitar, or reading books."
   ]
 };
 
 export const skills = [
-  "JavaScript", "React", "Node.js", "TypeScript", "Python",
-  "Tailwind CSS", "PostgreSQL", "MongoDB", "Git", "AWS",
-  "Docker", "REST APIs", "GraphQL", "Redux", "Next.js"
+  // Programming Languages
+  "Python", "C", "C++", "Java", "JavaScript", //"C#", "Swift", "Bash", "SQL",
+  
+   // Embedded Systems
+  "I2C", "UART", "SPI", "Raspberry Pi", "Arduino", "RTOS", "STM32", "ESP32",
+
+  // Hardware & Tools
+  "Oscilloscope", "Verilog", "Digital Multimeter", "Signal Generator",
+  
+
+  // Development Tools & Frameworks
+  "CMake", "Linux",
+  
+  // Architecture
+  "x86"
 ];
 
 export const experiences = [
   {
     id: 1,
-    title: "Senior Frontend Developer",
-    company: "Tech Corp",
-    period: "2022 - Present",
-    description: "Lead frontend development for enterprise applications. Mentored junior developers and implemented best practices for code quality."
+    title: "Undergraduate Research Assistant",
+    company: "Multi-Physics and Circuits Lab",
+    period: "May 2025 - Present",
+    description: "Developed machine learning models using PyTorch to predict quantum algorithm performance trends, achieving 86% accuracy."
   },
   {
-    id: 2,
-    title: "Full Stack Developer",
-    company: "StartupXYZ",
-    period: "2020 - 2022",
-    description: "Developed and maintained multiple client projects using React, Node.js, and MongoDB. Improved application performance by 40%."
+    id: 1,
+    title: "Software Engineer Intern",
+    company: "San Jose State University",
+    period: "May 2025 - Aug 2025",
+    description: "Developed an RFID card management system using the MERN stack with bcrypt security, real-time SSE monitoring, and Docker deployment with Nginx."
   },
-  {
-    id: 3,
-    title: "Junior Developer",
-    company: "Digital Agency",
-    period: "2018 - 2020",
-    description: "Built responsive websites and web applications. Collaborated with designers to implement pixel-perfect interfaces."
-  }
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Built a full-stack e-commerce solution with React, Node.js, and PostgreSQL. Implemented payment integration and admin dashboard.",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    title: "LCD Display Driver",
+    description: "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
+    tech: ["Firmware", "STM32", "Bare-metal", "C", "SPI"],
     link: "https://example.com",
-    github: "https://github.com/johndoe/ecommerce"
+    github: "https://github.com/gauravd12345/stm32_tft_display_driver"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Developed a collaborative task management tool with real-time updates using WebSockets and Redux for state management.",
-    tech: ["React", "WebSocket", "Redux", "Express"],
+    title: "Temperature & Humidity Sensor",
+    description: "Interfaced a DHT11 sensor for the ESP32 microcontroller using FreeRTOS and custom GPIO protocol with real-time web monitoring via SSE.",
+    tech: ["FreeRTOS", "ESP32", "C", "GPIO"],
     link: "https://example.com",
-    github: "https://github.com/johndoe/taskapp"
+    github: "https://github.com/gauravd12345/esp32_dht11_driver"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "Created a responsive weather application using OpenWeather API with location-based forecasts and historical data visualization.",
+    title: "Youtube Video Chatbot",
+    description: "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
     tech: ["React", "Chart.js", "REST API", "Tailwind"],
     link: "https://example.com",
-    github: "https://github.com/johndoe/weather"
+    github: "https://github.com/gauravd12345/video_query"
+  },
+  {
+    id: 4,
+    title: "Gameboy Emulator",
+    description: "Created an emulator for the Nintendo Gameboy in C++",
+    tech: ["C", "C++", "Assembly"],
+    link: "https://example.com",
+    github: "https://github.com/gauravd12345/gameboy_emulator"
   }
 ];
 
