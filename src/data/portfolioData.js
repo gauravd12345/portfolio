@@ -55,6 +55,15 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
+    title: "Smart Water Bottle",
+    description: "Designed a smart water bottle for measuring water intake by interfacing an ultrasonic sensor using an STM32.",
+    tech: ["Firmware", "STM32", "UART", "I2C"],
+    link: "",
+    github: ""
+  },
+
+  {
+    id: 2,
     title: "LCD Display Driver",
     description: "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
     tech: ["Firmware", "STM32", "Bare-metal", "C", "SPI"],
@@ -62,7 +71,7 @@ export const projects = [
     github: "https://github.com/gauravd12345/stm32_tft_display_driver"
   },
   {
-    id: 2,
+    id: 3,
     title: "Temperature & Humidity Sensor",
     description: "Interfaced a DHT11 sensor for the ESP32 microcontroller using FreeRTOS and custom GPIO protocol with real-time web monitoring via SSE.",
     tech: ["FreeRTOS", "ESP32", "C", "GPIO"],
@@ -70,7 +79,7 @@ export const projects = [
     github: "https://github.com/gauravd12345/esp32_dht11_driver"
   },
   {
-    id: 3,
+    id: 4,
     title: "Youtube Video Chatbot",
     description: "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
     tech: ["React", "Chart.js", "REST API", "Tailwind"],
@@ -78,7 +87,7 @@ export const projects = [
     github: "https://github.com/gauravd12345/video_query"
   },
   {
-    id: 4,
+    id: 5,
     title: "Gameboy Emulator",
     description: "Created an emulator for the Nintendo Gameboy in C++",
     tech: ["C", "C++", "Assembly"],
