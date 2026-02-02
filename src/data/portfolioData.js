@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Gaurav Dharmadhikari",
   title: "",
   tagline: "",
-  email: "john.doe@example.com",
+  email: "gauravdharmadhikari2@gmail.com",
   social: {
     github: "https://github.com/gauravd12345",
     linkedin: "https://www.linkedin.com/in/gaurav-dharmadhikari/",
@@ -55,21 +55,22 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
-    title: "Smart Water Bottle",
-    description: "Designed a smart water bottle for measuring water intake by interfacing an ultrasonic sensor using an STM32.",
-    tech: ["Firmware", "STM32", "UART", "I2C"],
-    link: "",
-    github: ""
-  },
-
-  {
-    id: 2,
-    title: "LCD Display Driver",
+    title: "Display Module Driver",
     description: "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
     tech: ["Firmware", "STM32", "Bare-metal", "C", "SPI"],
     link: "https://example.com",
     github: "https://github.com/gauravd12345/stm32_tft_display_driver"
   },
+  {
+    id: 2,
+    title: "Smart Water Bottle",
+    description: "Designed a smart water bottle for measuring water intake by interfacing an ultrasonic sensor using an STM32.",
+    tech: ["Firmware", "STM32", "UART", "I2C"],
+    link: "",
+    github: "",
+    ongoing: true
+  },
+
   {
     id: 3,
     title: "Temperature & Humidity Sensor",
@@ -80,22 +81,21 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Gameboy Emulator",
+    description: "Created an emulator for the Nintendo Gameboy in C++",
+    tech: ["C", "C++", "Assembly"],
+    link: "https://example.com",
+    github: "https://github.com/gauravd12345/gameboy_emulator",
+    ongoing: true
+  },
+
+  {
+    id: 5,
     title: "Youtube Video Chatbot",
     description: "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
     tech: ["React", "Chart.js", "REST API", "Tailwind"],
     link: "https://example.com",
     github: "https://github.com/gauravd12345/video_query"
-  },
-  {
-    id: 5,
-    title: "Gameboy Emulator",
-    description: "Created an emulator for the Nintendo Gameboy in C++",
-    tech: ["C", "C++", "Assembly"],
-    link: "https://example.com",
-    github: "https://github.com/gauravd12345/gameboy_emulator"
   }
-];
 
-export const adminConfig = {
-  defaultPassword: "admin123" // Change this in production!
-};
+];

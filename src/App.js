@@ -1,39 +1,32 @@
 import React, { useState } from 'react';
 import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import About from './components/About';
+import Home from './components/Home';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import AdminDashboard from './components/AdminDashboard';
 
 export default function App() {
+  const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
 
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const navigateToSection = (section) => {
+    setActiveSection(section);
     setMobileMenuOpen(false);
   };
-
-  if (isAdmin) {
-    return <AdminDashboard setIsAdmin={setIsAdmin} />;
-  }
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navigation 
+        activeSection={activeSection}
+        navigateToSection={navigateToSection}
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
-        scrollToSection={scrollToSection}
-        setIsAdmin={setIsAdmin}
       />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact setIsAdmin={setIsAdmin} />
+      <main className="pt-20">
+        {activeSection === 'home' && <Home />}
+        {activeSection === 'projects' && <Projects />}
+        {activeSection === 'experience' && <Experience />}
+      </main>
       <Footer />
     </div>
   );
