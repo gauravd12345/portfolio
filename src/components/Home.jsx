@@ -32,15 +32,17 @@ export default function Home({ navigateToSection }) {
               <button
                 type="button"
                 onClick={() => navigateToSection('projects')}
-                className="font-mono text-sm px-4 py-2 rounded-lg border border-gray-200 bg-white text-gray-900 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                className="font-mono text-sm px-4 py-2 rounded-lg border border-blue-200 bg-blue-50/60 text-blue-700 hover:bg-blue-100/70 hover:border-blue-300 transition-colors"
               >
                 Projects →
               </button>
               <a
-                href={personalInfo.social.email}
-                className="font-mono text-sm px-4 py-2 rounded-lg border border-gray-200 bg-white text-gray-900 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                href={personalInfo.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-sm px-4 py-2 rounded-lg border border-blue-200 bg-blue-50/60 text-blue-700 hover:bg-blue-100/70 hover:border-blue-300 transition-colors"
               >
-                Email
+                Resume →
               </a>
             </div>
           </div>
@@ -56,7 +58,7 @@ export default function Home({ navigateToSection }) {
                   href={personalInfo.social.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-gray-700 transition-colors border-b border-gray-100 pb-3"
+                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-blue-700 transition-colors border-b border-gray-100 pb-3"
                 >
                   <span className="font-mono text-sm">GitHub</span>
                   <Github size={18} />
@@ -65,23 +67,19 @@ export default function Home({ navigateToSection }) {
                   href={personalInfo.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-gray-700 transition-colors border-b border-gray-100 pb-3"
+                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-blue-700 transition-colors border-b border-gray-100 pb-3"
                 >
                   <span className="font-mono text-sm">LinkedIn</span>
                   <span className="text-gray-600 text-sm">in</span>
                 </a>
                 <a
                   href={personalInfo.social.email}
-                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-gray-700 transition-colors border-b-0 pb-0"
+                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-blue-700 transition-colors border-b-0 pb-0"
                 >
                   <span className="font-mono text-sm">Email</span>
                   <Mail size={18} />
                 </a>
               </div>
-
-              <p className="mt-4 text-sm text-gray-600 leading-relaxed">
-                Projects are the core content. Use the GitHub icon next to each project to open the repository.
-              </p>
             </div>
           </div>
         </div>

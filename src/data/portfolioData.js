@@ -2,6 +2,7 @@ export const personalInfo = {
   name: "Gaurav Dharmadhikari",
   title: "",
   tagline: "",
+  resume: "https://drive.google.com/file/d/1KCbiVcQh0sGPZUXN7g6pr3giOQbvBUpj/view",
   email: "gauravdharmadhikari2@gmail.com",
   social: {
     github: "https://github.com/gauravd12345",
@@ -38,17 +39,27 @@ export const skills = [
 export const experiences = [
   {
     id: 1,
+    title: "Software Engineering Intern - Embedded Autonomy",
+    company: "Rivian",
+    period: "May 2026 - Aug 2026",
+    description: "",
+    logoDomain: "rivian.com"
+  },
+  {
+    id: 1,
     title: "Undergraduate Research Assistant",
     company: "Multi-Physics and Circuits Lab",
     period: "May 2025 - Present",
-    description: "Developed machine learning models using PyTorch to predict quantum algorithm performance trends, achieving 86% accuracy."
+    description: "Developed machine learning models using PyTorch to predict quantum algorithm performance trends, achieving 86% accuracy.",
+    logoDomain: "sjsu.edu"
   },
   {
     id: 1,
     title: "Software Engineer Intern",
     company: "San Jose State University",
     period: "May 2025 - Aug 2025",
-    description: "Developed an RFID card management system using the MERN stack with bcrypt security, real-time SSE monitoring, and Docker deployment with Nginx."
+    description: "Developed an RFID card management system using the MERN stack with bcrypt security, real-time SSE monitoring, and Docker deployment with Nginx.",
+    logoDomain: "sjsu.edu"
   },
 ];
 

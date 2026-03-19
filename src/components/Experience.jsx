@@ -2,8 +2,14 @@ import React from 'react';
 import { experiences } from '../data/portfolioData';
 
 export default function Experience() {
+  const logoToken = process.env.REACT_APP_LOGO_DEV_TOKEN;
+  const getLogoUrl = (domain) => {
+    if (!domain || !logoToken) return null;
+    return `https://img.logo.dev/${domain}?token=${logoToken}`;
+  };
+
   return (
-    <section className="min-h-[calc(100vh-5rem)] px-6 py-14">
+    <section id="experience" className="min-h-[calc(100vh-5rem)] px-6 py-14">
       <div className="max-w-5xl mx-auto w-full">
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-3">
@@ -26,17 +32,30 @@ export default function Experience() {
             {experiences.map((exp, idx) => (
               <div key={`${exp.id}-${idx}`} className="relative pl-8 md:pl-16">
                 {/* Timeline dot */}
-                <div className="absolute left-1.5 md:left-[1.125rem] top-4 w-3 h-3 rounded-full bg-gray-900 shadow-sm" />
+                <div className="absolute left-3 md:left-6 -translate-x-1/2 top-4 w-3 h-3 rounded-full bg-gray-700 shadow-sm" />
 
                 <div className="bg-white border border-gray-200 rounded-2xl p-4 md:p-5 hover:border-gray-300 transition-colors">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                     <div className="min-w-0">
-                      <p className="text-gray-900 font-semibold text-base md:text-lg mt-0.5">
-                        {exp.company}
-                      </p>
-                      <h3 className="text-gray-700 font-medium text-sm md:text-base mt-1">
-                        {exp.title}
-                      </h3>
+                      <div className="flex items-center gap-3 mt-0.5 min-h-[3rem]">
+                        {getLogoUrl(exp.logoDomain) && (
+                          <img
+                            src={getLogoUrl(exp.logoDomain)}
+                            alt={`${exp.company} logo`}
+                            className="w-12 h-12 object-contain flex-shrink-0"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                          />
+                        )}
+                        <div className="flex flex-col justify-center leading-tight min-h-[3rem]">
+                          <p className="text-gray-900 font-semibold text-base md:text-lg">
+                            {exp.company}
+                          </p>
+                          <h3 className="text-gray-700 font-medium text-sm md:text-base mt-1">
+                            {exp.title}
+                          </h3>
+                        </div>
+                      </div>
                     </div>
                     <div className="font-mono text-xs text-gray-600 whitespace-nowrap md:mt-0 mt-1">
                       {exp.period}

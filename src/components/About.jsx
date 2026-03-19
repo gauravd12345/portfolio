@@ -4,7 +4,7 @@ import { User, Code2 } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="min-h-[calc(100vh-5rem)] flex items-center px-6 py-20">
+    <section id="about" className="min-h-[calc(100vh-5rem)] flex items-center px-6 py-20">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">

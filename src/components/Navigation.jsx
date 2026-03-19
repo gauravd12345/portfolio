@@ -1,24 +1,18 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
 
 export default function Navigation({ activeSection, navigateToSection, mobileMenuOpen, setMobileMenuOpen }) {
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'experience', label: 'Experience' }
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' }
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/60 backdrop-blur border-b border-gray-200/80 z-50">
+    <nav className="fixed top-0 w-full bg-white/85 backdrop-blur-md border-b border-slate-200 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <button 
-            onClick={() => navigateToSection('home')}
-            className="text-base md:text-lg font-bold text-gray-900 hover:text-gray-700 transition-colors"
-          >
-            {personalInfo.name}
-          </button>
+          <div className="w-6 md:w-10" aria-hidden="true" />
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-1">
@@ -28,14 +22,14 @@ export default function Navigation({ activeSection, navigateToSection, mobileMen
                 onClick={() => navigateToSection(item.id)}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   activeSection === item.id
-                    ? 'text-gray-900'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-blue-700'
+                    : 'text-gray-600 hover:text-blue-700'
                 }`}
                 aria-current={activeSection === item.id ? 'page' : undefined}
               >
                 <span
                   className={`inline-block pb-0.5 border-b-2 ${
-                    activeSection === item.id ? 'border-gray-900' : 'border-transparent'
+                    activeSection === item.id ? 'border-blue-600' : 'border-transparent'
                   }`}
                 >
                   {item.label}
@@ -61,7 +55,7 @@ export default function Navigation({ activeSection, navigateToSection, mobileMen
                 key={item.id}
                 onClick={() => navigateToSection(item.id)}
                 className={`text-left px-4 py-2 rounded-lg font-medium transition-colors ${
-                  activeSection === item.id ? 'bg-gray-900 text-white' : 'text-gray-700 hover:bg-gray-100'
+                  activeSection === item.id ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-blue-50'
                 }`}
               >
                 {item.label}

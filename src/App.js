@@ -15,7 +15,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-gray-900">
       <Navigation 
         activeSection={activeSection}
         navigateToSection={navigateToSection}
