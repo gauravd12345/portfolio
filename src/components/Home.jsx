@@ -1,58 +1,89 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Cpu } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 import { personalInfo, aboutMe } from '../data/portfolioData';
 
-export default function Home() {
+export default function Home({ navigateToSection }) {
   return (
-    <section className="min-h-[calc(100vh-5rem)] flex items-center px-6 py-20">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="flex items-center gap-4 mb-8">
-          <div className="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center shadow-lg">
-            <Cpu className="text-white" size={32} />
+    <section className="min-h-[calc(100vh-5rem)] flex items-center px-6 py-14">
+      <div className="max-w-5xl mx-auto w-full">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
+          {/* Left: intro */}
+          <div className="flex-1 min-w-0">
+            <div className="inline-flex items-center gap-3 mb-4">
+              <div>
+                <h1 className="font-mono text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                  {personalInfo.name}
+                </h1>
+                <p className="font-mono text-sm md:text-base text-gray-600 mt-1">
+                  B.S. in Computer Engineering @ San Jose State
+                </p>
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 pt-6 space-y-4">
+              {aboutMe.paragraphs.map((p, idx) => (
+                <p key={idx} className="text-gray-700 text-base leading-relaxed">
+                  {p}
+                </p>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <button
+                type="button"
+                onClick={() => navigateToSection('projects')}
+                className="font-mono text-sm px-4 py-2 rounded-lg border border-gray-200 bg-white text-gray-900 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+              >
+                Projects →
+              </button>
+              <a
+                href={personalInfo.social.email}
+                className="font-mono text-sm px-4 py-2 rounded-lg border border-gray-200 bg-white text-gray-900 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+              >
+                Email
+              </a>
+            </div>
           </div>
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-              {personalInfo.name}
-            </h1>
-            <p className="text-lg text-gray-600 mt-1">
-              Embedded Software Developer
-            </p>
+
+          {/* Right: contact */}
+          <div className="w-full lg:w-72">
+            <div className="border border-gray-200 rounded-2xl bg-white p-5">
+              <div className="font-mono text-xs uppercase tracking-widest text-gray-600 mb-4">
+                Contact
+              </div>
+              <div className="space-y-3">
+                <a
+                  href={personalInfo.social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-gray-700 transition-colors border-b border-gray-100 pb-3"
+                >
+                  <span className="font-mono text-sm">GitHub</span>
+                  <Github size={18} />
+                </a>
+                <a
+                  href={personalInfo.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-gray-700 transition-colors border-b border-gray-100 pb-3"
+                >
+                  <span className="font-mono text-sm">LinkedIn</span>
+                  <span className="text-gray-600 text-sm">in</span>
+                </a>
+                <a
+                  href={personalInfo.social.email}
+                  className="flex items-center justify-between gap-3 text-gray-900 hover:text-gray-700 transition-colors border-b-0 pb-0"
+                >
+                  <span className="font-mono text-sm">Email</span>
+                  <Mail size={18} />
+                </a>
+              </div>
+
+              <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+                Projects are the core content. Use the GitHub icon next to each project to open the repository.
+              </p>
+            </div>
           </div>
-        </div>
-        <p className="text-gray-700 mb-8 max-w-3xl text-lg leading-relaxed">
-          {aboutMe.paragraphs[0]}
-        </p>
-        {aboutMe.paragraphs[1] && (
-          <p className="text-gray-700 mb-8 max-w-3xl text-lg leading-relaxed">
-            {aboutMe.paragraphs[1]}
-          </p>
-        )}
-        <div className="flex space-x-4">
-          <a 
-            href={personalInfo.social.github} 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all shadow-md"
-            aria-label="GitHub"
-          >
-            <Github size={20} />
-          </a>
-          <a 
-            href={personalInfo.social.linkedin} 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all shadow-md"
-            aria-label="LinkedIn"
-          >
-            <Linkedin size={20} />
-          </a>
-          <a 
-            href={personalInfo.social.email} 
-            className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all shadow-md"
-            aria-label="Email"
-          >
-            <Mail size={20} />
-          </a>
         </div>
       </div>
     </section>

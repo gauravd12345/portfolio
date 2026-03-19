@@ -1,72 +1,64 @@
 import React from 'react';
-import { Github, FolderKanban } from 'lucide-react';
+import { Github, Star } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 
 export default function Projects() {
   return (
-    <section className="min-h-[calc(100vh-5rem)] px-6 py-12">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="mb-8">
+    <section className="min-h-[calc(100vh-5rem)] px-6 py-14">
+      <div className="max-w-5xl mx-auto w-full">
+        <div className="mb-10">
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
-              <FolderKanban className="text-white" size={20} />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <div className="w-2.5 h-2.5 bg-gray-900 rounded-full" />
+            <div className="font-mono text-xs uppercase tracking-widest text-gray-600">
               Projects
-            </h2>
+            </div>
           </div>
-          <div className="w-20 h-0.5 bg-gray-900 rounded-full"></div>
-          <p className="text-gray-600 mt-3 text-base">
-            A collection of my work in embedded systems, firmware development, and software engineering.
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Selected Work</h2>
+          <p className="text-gray-600 mt-3 text-base max-w-2xl leading-relaxed">
+            Click the GitHub icon next to a project to open the repository. Featured projects have a gold star.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <div 
-              key={project.id} 
-              className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-gray-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
-            >
-              <div className="mb-4">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <FolderKanban className="text-white" size={24} />
+        <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 bg-white">
+          {projects.map((project, idx) => (
+            <div key={project.id} className="px-6 py-6">
+              <div className="flex items-start justify-between gap-6">
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 truncate">
+                      {project.title}
+                    </h3>
+                    {project.featured && (
+                      <Star className="text-yellow-500 fill-yellow-500" size={18} aria-label="Featured" />
+                    )}
                   </div>
-                  {project.ongoing && (
-                    <span className="px-2 py-1 bg-red-100 text-red-700 text-xs font-semibold rounded-full">
-                      Ongoing
-                    </span>
-                  )}
+
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {project.tech.map((tech, techIdx) => (
+                      <span
+                        key={techIdx}
+                        className="text-xs font-medium text-gray-700 bg-gray-50 border border-gray-200 rounded-full px-3 py-1"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4 flex-grow text-sm">
-                  {project.description}
-                </p>
-              </div>
-              
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((tech, techIdx) => (
-                  <span 
-                    key={techIdx} 
-                    className="text-xs px-2.5 py-1 bg-gray-50 border border-gray-300 rounded-full font-medium text-gray-700"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              
-              <div className="mt-auto pt-4 border-t border-gray-200">
+
                 {project.github && (
-                  <a 
-                    href={project.github} 
+                  <a
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-sm font-semibold text-gray-900 hover:text-gray-700 transition-colors"
+                    className="flex items-center justify-center p-2 rounded-xl border border-gray-200 text-gray-900 hover:border-gray-900 hover:bg-gray-50 transition-colors flex-shrink-0"
+                    aria-label={`GitHub for ${project.title}`}
+                    title="GitHub"
                   >
-                    <Github size={16} className="mr-2" />
-                    View Code
+                    <Github size={18} />
                   </a>
                 )}
               </div>

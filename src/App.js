@@ -15,15 +15,15 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-gray-50 text-gray-900">
       <Navigation 
         activeSection={activeSection}
         navigateToSection={navigateToSection}
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
       />
-      <main className="pt-20">
-        {activeSection === 'home' && <Home />}
+      <main className="pt-20 pb-16">
+        {activeSection === 'home' && <Home navigateToSection={navigateToSection} />}
         {activeSection === 'projects' && <Projects />}
         {activeSection === 'experience' && <Experience />}
       </main>

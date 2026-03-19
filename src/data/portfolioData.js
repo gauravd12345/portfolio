@@ -12,8 +12,8 @@ export const personalInfo = {
 
 export const aboutMe = {
   paragraphs: [
-    "I'm an embedded software developer with an interest in firmware and embedded systems. I specialize in React, Node.js, and modern web technologies. I'm passionate about creating clean, efficient code and delivering exceptional user experiences.",
-    "When I'm not coding, you can find me watching movies, playing guitar, or reading books."
+    "I'm passionate about embedded systems and firmware. ",
+    "Outside of tech, I'm also interested in watching movies, playing guitar, and reading books."
   ]
 };
 
@@ -59,7 +59,8 @@ export const projects = [
     description: "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
     tech: ["Firmware", "STM32", "Bare-metal", "C", "SPI"],
     link: "https://example.com",
-    github: "https://github.com/gauravd12345/stm32_tft_display_driver"
+    github: "https://github.com/gauravd12345/stm32_tft_display_driver",
+    featured: true
   },
   {
     id: 2,
@@ -77,7 +78,8 @@ export const projects = [
     description: "Interfaced a DHT11 sensor for the ESP32 microcontroller using FreeRTOS and custom GPIO protocol with real-time web monitoring via SSE.",
     tech: ["FreeRTOS", "ESP32", "C", "GPIO"],
     link: "https://example.com",
-    github: "https://github.com/gauravd12345/esp32_dht11_driver"
+    github: "https://github.com/gauravd12345/esp32_dht11_driver",
+    featured: true
   },
   {
     id: 4,

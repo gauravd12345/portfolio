@@ -10,29 +10,36 @@ export default function Navigation({ activeSection, navigateToSection, mobileMen
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200/50 z-50 shadow-sm">
+    <nav className="fixed top-0 w-full bg-white/60 backdrop-blur border-b border-gray-200/80 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <button 
             onClick={() => navigateToSection('home')}
-            className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-all"
+            className="text-base md:text-lg font-bold text-gray-900 hover:text-gray-700 transition-colors"
           >
             {personalInfo.name}
           </button>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-1">
+          <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => navigateToSection(item.id)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   activeSection === item.id
-                    ? 'bg-gray-900 text-white shadow-md'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+                    ? 'text-gray-900'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
+                aria-current={activeSection === item.id ? 'page' : undefined}
               >
-                {item.label}
+                <span
+                  className={`inline-block pb-0.5 border-b-2 ${
+                    activeSection === item.id ? 'border-gray-900' : 'border-transparent'
+                  }`}
+                >
+                  {item.label}
+                </span>
               </button>
             ))}
           </div>
@@ -53,10 +60,8 @@ export default function Navigation({ activeSection, navigateToSection, mobileMen
               <button
                 key={item.id}
                 onClick={() => navigateToSection(item.id)}
-                className={`text-left px-4 py-2 rounded-lg font-medium transition-all ${
-                  activeSection === item.id
-                    ? 'bg-gray-900 text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
+                className={`text-left px-4 py-2 rounded-lg font-medium transition-colors ${
+                  activeSection === item.id ? 'bg-gray-900 text-white' : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
                 {item.label}
