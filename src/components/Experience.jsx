@@ -29,8 +29,10 @@ export default function Experience() {
           <div className="absolute left-3 md:left-6 top-0 bottom-0 w-px bg-gray-200 hidden md:block" />
 
           <div className="space-y-6">
-            {experiences.map((exp, idx) => (
-              <div key={`${exp.id}-${idx}`} className="relative pl-8 md:pl-16">
+            {experiences.map((exp) => {
+              const logoSrc = getLogoUrl(exp.logoDomain);
+              return (
+              <div key={exp.id} className="relative pl-8 md:pl-16">
                 {/* Timeline dot */}
                 <div className="absolute left-3 md:left-6 -translate-x-1/2 top-4 w-3 h-3 rounded-full bg-gray-700 shadow-sm" />
 
@@ -38,9 +40,9 @@ export default function Experience() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                     <div className="min-w-0">
                       <div className="flex items-center gap-3 mt-0.5 min-h-[3rem]">
-                        {getLogoUrl(exp.logoDomain) && (
+                        {logoSrc && (
                           <img
-                            src={getLogoUrl(exp.logoDomain)}
+                            src={logoSrc}
                             alt={`${exp.company} logo`}
                             className="w-12 h-12 object-contain flex-shrink-0"
                             loading="lazy"
@@ -67,7 +69,8 @@ export default function Experience() {
                   </p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

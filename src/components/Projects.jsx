@@ -72,9 +72,9 @@ export default function Projects() {
               No projects in this category yet.
             </p>
           ) : (
-            visibleProjects.map((project, idx) => (
+            visibleProjects.map((project) => (
             <div
-              key={`${project.id}-${idx}`}
+              key={project.id}
               className="px-6 py-6 rounded-2xl border border-gray-200 bg-white"
             >
               <div className="flex items-start justify-between gap-6">

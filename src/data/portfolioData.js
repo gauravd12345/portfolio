@@ -1,9 +1,6 @@
 export const personalInfo = {
   name: "Gaurav Dharmadhikari",
-  title: "",
-  tagline: "",
   resume: "https://drive.google.com/file/d/1KCbiVcQh0sGPZUXN7g6pr3giOQbvBUpj/view",
-  email: "gauravdharmadhikari2@gmail.com",
   social: {
     github: "https://github.com/gauravd12345",
     linkedin: "https://www.linkedin.com/in/gaurav-dharmadhikari/",
@@ -18,19 +15,6 @@ export const aboutMe = {
   ]
 };
 
-export const skills = [
-  // Programming Languages
-  "Python", "C", "C++", "Java", "JavaScript",
-  // Embedded Systems
-  "I2C", "UART", "SPI", "Raspberry Pi", "Arduino", "RTOS", "STM32", "ESP32",
-  // Hardware & Tools
-  "Oscilloscope", "Verilog", "Digital Multimeter", "Signal Generator",
-  // Development Tools & Frameworks
-  "CMake", "Linux",
-  // Architecture
-  "x86"
-];
-
 export const experiences = [
   {
     id: 1,
@@ -38,8 +22,7 @@ export const experiences = [
     company: "Rivian",
     period: "May 2026 - Aug 2026",
     description: "",
-    logoDomain: "rivian.com",
-    logoUrl: "https://img.logo.dev/rivian.com?token=pk_S29sbQnRQleGqnuSYQdH2g&size=64&format=png"
+    logoDomain: "rivian.com"
   },
   {
     id: 2,
@@ -47,8 +30,7 @@ export const experiences = [
     company: "Multi-Physics and Circuits Lab",
     period: "May 2025 - Present",
     description: "Developed machine learning models using PyTorch to predict quantum algorithm performance trends, achieving 86% accuracy.",
-    logoDomain: "sjsu.edu",
-    logoUrl: "https://img.logo.dev/sjsu.edu?token=pk_S29sbQnRQleGqnuSYQdH2g&size=64&format=png"
+    logoDomain: "sjsu.edu"
   },
   {
     id: 3,
@@ -56,8 +38,7 @@ export const experiences = [
     company: "San Jose State University",
     period: "May 2025 - Aug 2025",
     description: "Developed an RFID card management system using the MERN stack with bcrypt security, real-time SSE monitoring, and Docker deployment with Nginx.",
-    logoDomain: "sjsu.edu",
-    logoUrl: "https://img.logo.dev/sjsu.edu?token=pk_S29sbQnRQleGqnuSYQdH2g&size=64&format=png"
+    logoDomain: "sjsu.edu"
   },
 ];
 
@@ -74,7 +55,6 @@ export const projects = [
     title: "Display Module Driver",
     description: "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
     tech: ["Firmware", "STM32", "Bare-metal", "C", "SPI"],
-    link: "https://example.com",
     github: "https://github.com/gauravd12345/stm32_tft_display_driver",
     featured: true,
     categories: ["embedded"]
@@ -84,9 +64,7 @@ export const projects = [
     title: "Smart Water Bottle",
     description: "Designed a smart water bottle for measuring water intake by interfacing an ultrasonic sensor using an STM32.",
     tech: ["Firmware", "STM32", "UART", "I2C"],
-    link: "",
     github: "",
-    ongoing: true,
     categories: ["embedded"]
   },
   {
@@ -94,7 +72,6 @@ export const projects = [
     title: "Temperature & Humidity Sensor",
     description: "Interfaced a DHT11 sensor for the ESP32 microcontroller using FreeRTOS and custom GPIO protocol with real-time web monitoring via SSE.",
     tech: ["FreeRTOS", "ESP32", "C", "GPIO"],
-    link: "https://example.com",
     github: "https://github.com/gauravd12345/esp32_dht11_driver",
     featured: true,
     categories: ["embedded"]
@@ -104,9 +81,7 @@ export const projects = [
     title: "Gameboy Emulator",
     description: "Created an emulator for the Nintendo Gameboy in C++",
     tech: ["C", "C++", "Assembly"],
-    link: "https://example.com",
     github: "https://github.com/gauravd12345/gameboy_emulator",
-    ongoing: true,
     categories: ["embedded"]
   },
   {
@@ -114,7 +89,6 @@ export const projects = [
     title: "Youtube Video Chatbot",
     description: "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
     tech: ["React", "Chart.js", "REST API", "Tailwind"],
-    link: "https://example.com",
     github: "https://github.com/gauravd12345/video_query",
     categories: ["ai"]
   }
