@@ -4,8 +4,8 @@ import { Menu, X } from 'lucide-react';
 export default function Navigation({ activeSection, navigateToSection, mobileMenuOpen, setMobileMenuOpen }) {
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' }
+    { id: 'projects', label: 'Projects' },
+    { id: 'experience', label: 'Experience' }
   ];
 
   return (

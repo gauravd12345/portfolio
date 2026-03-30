@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { Github, Star } from 'lucide-react';
-import { projects } from '../data/portfolioData';
+import { projects, projectTabs } from '../data/portfolioData';
+
+function matchesTab(project, tabId) {
+  if (tabId === 'all') return true;
+  if (tabId === 'featured') return Boolean(project.featured);
+  return project.categories?.includes(tabId) ?? false;
+}
 
 export default function Projects() {
+  const [activeTab, setActiveTab] = useState('all');
+
+  const visibleProjects = useMemo(
+    () => projects.filter((p) => matchesTab(p, activeTab)),
+    [activeTab]
+  );
+
   return (
     <section id="projects" className="min-h-[calc(100vh-5rem)] px-6 py-14">
       <div className="max-w-5xl mx-auto w-full">
@@ -19,8 +32,47 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="space-y-4">
-          {projects.map((project, idx) => (
+        <div
+          className="flex flex-wrap gap-2 mb-8"
+          role="tablist"
+          aria-label="Filter projects by category"
+        >
+          {projectTabs.map((tab) => {
+            const isActive = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                id={`project-tab-${tab.id}`}
+                aria-controls="project-panel"
+                onClick={() => setActiveTab(tab.id)}
+                className={[
+                  'px-4 py-2 rounded-full text-sm font-medium border transition-colors',
+                  isActive
+                    ? 'border-blue-500 bg-blue-50 text-blue-800 shadow-sm'
+                    : 'border-slate-200 bg-white text-slate-700 hover:border-blue-200 hover:bg-slate-50 hover:text-blue-800'
+                ].join(' ')}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+
+        <div
+          id="project-panel"
+          role="tabpanel"
+          aria-labelledby={`project-tab-${activeTab}`}
+          className="space-y-4"
+        >
+          {visibleProjects.length === 0 ? (
+            <p className="text-slate-600 text-sm py-8 text-center border border-dashed border-slate-200 rounded-2xl bg-slate-50/50">
+              No projects in this category yet.
+            </p>
+          ) : (
+            visibleProjects.map((project, idx) => (
             <div
               key={`${project.id}-${idx}`}
               className="px-6 py-6 rounded-2xl border border-gray-200 bg-white"
@@ -66,7 +118,8 @@ export default function Projects() {
                 )}
               </div>
             </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </section>

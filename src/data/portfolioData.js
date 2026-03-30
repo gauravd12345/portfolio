@@ -20,18 +20,13 @@ export const aboutMe = {
 
 export const skills = [
   // Programming Languages
-  "Python", "C", "C++", "Java", "JavaScript", //"C#", "Swift", "Bash", "SQL",
-  
-   // Embedded Systems
+  "Python", "C", "C++", "Java", "JavaScript",
+  // Embedded Systems
   "I2C", "UART", "SPI", "Raspberry Pi", "Arduino", "RTOS", "STM32", "ESP32",
-
   // Hardware & Tools
   "Oscilloscope", "Verilog", "Digital Multimeter", "Signal Generator",
-  
-
   // Development Tools & Frameworks
   "CMake", "Linux",
-  
   // Architecture
   "x86"
 ];
@@ -43,24 +38,34 @@ export const experiences = [
     company: "Rivian",
     period: "May 2026 - Aug 2026",
     description: "",
-    logoDomain: "rivian.com"
+    logoDomain: "rivian.com",
+    logoUrl: "https://img.logo.dev/rivian.com?token=pk_S29sbQnRQleGqnuSYQdH2g&size=64&format=png"
   },
   {
-    id: 1,
+    id: 2,
     title: "Undergraduate Research Assistant",
     company: "Multi-Physics and Circuits Lab",
     period: "May 2025 - Present",
     description: "Developed machine learning models using PyTorch to predict quantum algorithm performance trends, achieving 86% accuracy.",
-    logoDomain: "sjsu.edu"
+    logoDomain: "sjsu.edu",
+    logoUrl: "https://img.logo.dev/sjsu.edu?token=pk_S29sbQnRQleGqnuSYQdH2g&size=64&format=png"
   },
   {
-    id: 1,
+    id: 3,
     title: "Software Engineer Intern",
     company: "San Jose State University",
     period: "May 2025 - Aug 2025",
     description: "Developed an RFID card management system using the MERN stack with bcrypt security, real-time SSE monitoring, and Docker deployment with Nginx.",
-    logoDomain: "sjsu.edu"
+    logoDomain: "sjsu.edu",
+    logoUrl: "https://img.logo.dev/sjsu.edu?token=pk_S29sbQnRQleGqnuSYQdH2g&size=64&format=png"
   },
+];
+
+export const projectTabs = [
+  { id: "all", label: "All" },
+  { id: "embedded", label: "Embedded" },
+  { id: "ai", label: "AI" },
+  { id: "featured", label: "Featured" }
 ];
 
 export const projects = [
@@ -71,7 +76,8 @@ export const projects = [
     tech: ["Firmware", "STM32", "Bare-metal", "C", "SPI"],
     link: "https://example.com",
     github: "https://github.com/gauravd12345/stm32_tft_display_driver",
-    featured: true
+    featured: true,
+    categories: ["embedded"]
   },
   {
     id: 2,
@@ -80,9 +86,9 @@ export const projects = [
     tech: ["Firmware", "STM32", "UART", "I2C"],
     link: "",
     github: "",
-    ongoing: true
+    ongoing: true,
+    categories: ["embedded"]
   },
-
   {
     id: 3,
     title: "Temperature & Humidity Sensor",
@@ -90,7 +96,8 @@ export const projects = [
     tech: ["FreeRTOS", "ESP32", "C", "GPIO"],
     link: "https://example.com",
     github: "https://github.com/gauravd12345/esp32_dht11_driver",
-    featured: true
+    featured: true,
+    categories: ["embedded"]
   },
   {
     id: 4,
@@ -99,16 +106,16 @@ export const projects = [
     tech: ["C", "C++", "Assembly"],
     link: "https://example.com",
     github: "https://github.com/gauravd12345/gameboy_emulator",
-    ongoing: true
+    ongoing: true,
+    categories: ["embedded"]
   },
-
   {
     id: 5,
     title: "Youtube Video Chatbot",
     description: "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
     tech: ["React", "Chart.js", "REST API", "Tailwind"],
     link: "https://example.com",
-    github: "https://github.com/gauravd12345/video_query"
+    github: "https://github.com/gauravd12345/video_query",
+    categories: ["ai"]
   }
-
 ];
