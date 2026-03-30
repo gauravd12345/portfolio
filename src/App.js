@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-gray-900">
-      <Navigation 
+      <Navigation
         activeSection={activeSection}
         navigateToSection={navigateToSection}
         mobileMenuOpen={mobileMenuOpen}

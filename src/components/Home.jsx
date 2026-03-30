@@ -9,15 +9,13 @@ export default function Home({ navigateToSection }) {
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
           {/* Left: intro */}
           <div className="flex-1 min-w-0">
-            <div className="inline-flex items-center gap-3 mb-4">
-              <div>
-                <h1 className="font-mono text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                  {personalInfo.name}
-                </h1>
-                <p className="font-mono text-sm md:text-base text-gray-600 mt-1">
-                  B.S. in Computer Engineering @ San Jose State
-                </p>
-              </div>
+            <div className="mb-4">
+              <h1 className="font-mono text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                {personalInfo.name}
+              </h1>
+              <p className="font-mono text-sm md:text-base text-gray-600 mt-1">
+                B.S. in Computer Engineering @ San Jose State
+              </p>
             </div>
 
             <div className="border-t border-gray-200 pt-6 space-y-4">

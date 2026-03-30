@@ -21,7 +21,6 @@ export const experiences = [
     title: "Software Engineering Intern - Embedded Autonomy",
     company: "Rivian",
     period: "May 2026 - Aug 2026",
-    description: "",
     logoDomain: "rivian.com"
   },
   {

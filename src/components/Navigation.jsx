@@ -13,7 +13,7 @@ export default function Navigation({ activeSection, navigateToSection, mobileMen
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="w-6 md:w-10" aria-hidden="true" />
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
@@ -39,7 +39,7 @@ export default function Navigation({ activeSection, navigateToSection, mobileMen
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >

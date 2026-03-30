@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { Github, Star } from 'lucide-react';
 import { projects, projectTabs } from '../data/portfolioData';
 
@@ -10,11 +10,7 @@ function matchesTab(project, tabId) {
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('all');
-
-  const visibleProjects = useMemo(
-    () => projects.filter((p) => matchesTab(p, activeTab)),
-    [activeTab]
-  );
+  const visibleProjects = projects.filter((p) => matchesTab(p, activeTab));
 
   return (
     <section id="projects" className="min-h-[calc(100vh-5rem)] px-6 py-14">
@@ -73,51 +69,51 @@ export default function Projects() {
             </p>
           ) : (
             visibleProjects.map((project) => (
-            <div
-              key={project.id}
-              className="px-6 py-6 rounded-2xl border border-gray-200 bg-white"
-            >
-              <div className="flex items-start justify-between gap-6">
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-xl font-semibold text-gray-900 truncate">
-                      {project.title}
-                    </h3>
-                    {project.featured && (
-                      <Star className="text-yellow-500 fill-yellow-500" size={18} aria-label="Featured" />
-                    )}
+              <div
+                key={project.id}
+                className="px-6 py-6 rounded-2xl border border-gray-200 bg-white"
+              >
+                <div className="flex items-start justify-between gap-6">
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900 truncate">
+                        {project.title}
+                      </h3>
+                      {project.featured && (
+                        <Star className="text-yellow-500 fill-yellow-500" size={18} aria-label="Featured" />
+                      )}
+                    </div>
+
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {project.tech.map((tech, techIdx) => (
+                        <span
+                          key={techIdx}
+                          className="text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-full px-3 py-1"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIdx) => (
-                      <span
-                        key={techIdx}
-                        className="text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-full px-3 py-1"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center p-2 rounded-xl border border-slate-200 text-slate-700 hover:border-blue-300 hover:text-blue-700 hover:bg-blue-50 transition-colors flex-shrink-0"
+                      aria-label={`GitHub for ${project.title}`}
+                      title="GitHub"
+                    >
+                      <Github size={18} />
+                    </a>
+                  )}
                 </div>
-
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center p-2 rounded-xl border border-slate-200 text-slate-700 hover:border-blue-300 hover:text-blue-700 hover:bg-blue-50 transition-colors flex-shrink-0"
-                    aria-label={`GitHub for ${project.title}`}
-                    title="GitHub"
-                  >
-                    <Github size={18} />
-                  </a>
-                )}
               </div>
-            </div>
             ))
           )}
         </div>
