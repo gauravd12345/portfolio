@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { personalInfo, aboutMe } from '../data/portfolioData';
 
 export default function Home({ navigateToSection }) {
@@ -68,7 +68,7 @@ export default function Home({ navigateToSection }) {
                   className="flex items-center justify-between gap-3 text-gray-900 hover:text-blue-700 transition-colors border-b border-gray-100 pb-3"
                 >
                   <span className="font-mono text-sm">LinkedIn</span>
-                  <span className="text-gray-600 text-sm">in</span>
+                  <Linkedin size={18} aria-hidden />
                 </a>
                 <a
                   href={personalInfo.social.email}

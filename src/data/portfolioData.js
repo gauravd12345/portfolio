@@ -15,6 +15,10 @@ export const aboutMe = {
   ]
 };
 
+export const meLinks = {
+  letterboxdFavorites: "https://letterboxd.com/gaurav_d/list/my-favorite-movies/detail/"
+};
+
 export const experiences = [
   {
     id: 1,
@@ -43,9 +47,9 @@ export const experiences = [
 
 export const projectTabs = [
   { id: "all", label: "All" },
-  { id: "embedded", label: "Embedded" },
   { id: "ai", label: "AI" },
-  { id: "featured", label: "Featured" }
+  { id: "embedded", label: "Embedded" },
+  { id: "fullstack", label: "Full Stack" }
 ];
 
 export const projects = [
@@ -55,7 +59,6 @@ export const projects = [
     description: "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
     tech: ["Firmware", "STM32", "Bare-metal", "C", "SPI"],
     github: "https://github.com/gauravd12345/stm32_tft_display_driver",
-    featured: true,
     categories: ["embedded"]
   },
   {
@@ -72,7 +75,6 @@ export const projects = [
     description: "Interfaced a DHT11 sensor for the ESP32 microcontroller using FreeRTOS and custom GPIO protocol with real-time web monitoring via SSE.",
     tech: ["FreeRTOS", "ESP32", "C", "GPIO"],
     github: "https://github.com/gauravd12345/esp32_dht11_driver",
-    featured: true,
     categories: ["embedded"]
   },
   {
@@ -89,6 +91,22 @@ export const projects = [
     description: "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
     tech: ["React", "Chart.js", "REST API", "Tailwind"],
     github: "https://github.com/gauravd12345/video_query",
+    categories: ["fullstack"]
+  },
+  {
+    id: 6,
+    title: "wikiGPT",
+    description: "Built a decoder-only GPT from scratch in PyTorch with multi-head causal self-attention, trained on conversational and QA datasets for chat and question answering.",
+    tech: ["PyTorch", "Transformers", "GPT", "Python"],
+    github: "https://github.com/gauravd12345/wikiGPT",
+    categories: ["ai"]
+  },
+  {
+    id: 7,
+    title: "miniCLIP",
+    description: "Implemented CLIP from scratch in PyTorch and pre-trained it on a smaller dataset for image-text representation learning.",
+    tech: ["PyTorch", "CLIP", "Python"],
+    github: "https://github.com/gauravd12345/miniCLIP",
     categories: ["ai"]
   }
 ];

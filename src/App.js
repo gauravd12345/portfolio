@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Me from './components/Me';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         {activeSection === 'home' && <Home navigateToSection={navigateToSection} />}
         {activeSection === 'projects' && <Projects />}
         {activeSection === 'experience' && <Experience />}
+        {activeSection === 'me' && <Me />}
       </main>
       <Footer />
     </div>

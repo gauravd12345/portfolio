@@ -5,7 +5,8 @@ export default function Navigation({ activeSection, navigateToSection, mobileMen
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
-    { id: 'experience', label: 'Experience' }
+    { id: 'experience', label: 'Experience' },
+    { id: 'me', label: 'Me' }
   ];
 
   return (

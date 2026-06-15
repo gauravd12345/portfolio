@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Github, Star } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { projects, projectTabs } from '../data/portfolioData';
 
 function matchesTab(project, tabId) {
   if (tabId === 'all') return true;
-  if (tabId === 'featured') return Boolean(project.featured);
   return project.categories?.includes(tabId) ?? false;
 }
 
@@ -24,7 +23,7 @@ export default function Projects() {
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Selected Work</h2>
           <p className="text-slate-600 mt-3 text-base max-w-2xl leading-relaxed">
-            Click the GitHub icon next to a project to open the repository. Featured projects have a gold star.
+            Click the GitHub icon next to a project to open the repository.
           </p>
         </div>
 
@@ -75,14 +74,9 @@ export default function Projects() {
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="min-w-0">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-xl font-semibold text-gray-900 truncate">
-                        {project.title}
-                      </h3>
-                      {project.featured && (
-                        <Star className="text-yellow-500 fill-yellow-500" size={18} aria-label="Featured" />
-                      )}
-                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 truncate mb-2">
+                      {project.title}
+                    </h3>
 
                     <p className="text-gray-700 text-sm leading-relaxed">
                       {project.description}
