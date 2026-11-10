@@ -1,0 +1,24 @@
+{
+  "experiences": [
+    {
+      "title": "Software Engineering Intern - Embedded Autonomy",
+      "company": "Rivian",
+      "period": "May 2026 - Aug 2026",
+      "logoDomain": "rivian.com"
+    },
+    {
+      "title": "Undergraduate Research Assistant",
+      "company": "Multi-Physics and Circuits Lab",
+      "period": "May 2025 - Present",
+      "description": "Developed machine learning models using PyTorch to predict quantum algorithm performance trends, achieving 86% accuracy.",
+      "logoDomain": "sjsu.edu"
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "San Jose State University",
+      "period": "May 2025 - Aug 2025",
+      "description": "Developed an RFID card management system using the MERN stack with bcrypt security, real-time SSE monitoring, and Docker deployment with Nginx.",
+      "logoDomain": "sjsu.edu"
+    }
+  ]
+}

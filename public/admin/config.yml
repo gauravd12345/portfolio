@@ -1,0 +1,108 @@
+backend:
+  name: github
+  repo: gauravd12345/portfolio
+  branch: main
+  commit_messages:
+    update: "Update {{slug}} via admin"
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: content
+    label: Portfolio Content
+    editor:
+      preview: false
+    files:
+      - name: experiences
+        label: Experience
+        file: src/data/experiences.json
+        format: json
+        fields:
+          - name: experiences
+            label: Experiences
+            label_singular: Experience
+            widget: list
+            add_to_top: true
+            summary: "{{fields.company}} — {{fields.title}}"
+            fields:
+              - { name: title, label: Role, widget: string }
+              - { name: company, label: Company, widget: string }
+              - { name: period, label: Dates, widget: string, hint: "e.g. May 2025 - Present" }
+              - { name: description, label: Description, widget: text, required: false }
+              - name: logoDomain
+                label: Company website domain
+                widget: string
+                required: false
+                hint: "Used to fetch the logo, e.g. rivian.com"
+
+      - name: projects
+        label: Projects
+        file: src/data/projects.json
+        format: json
+        fields:
+          - name: projects
+            label: Projects
+            label_singular: Project
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - name: tech
+                label: Tech tags
+                widget: list
+                field: { name: tag, label: Tag, widget: string }
+              - { name: github, label: GitHub URL, widget: string, required: false, default: "" }
+              - name: categories
+                label: Categories
+                widget: relation
+                collection: content
+                file: projects
+                multiple: true
+                search_fields: ["projectTabs.*.id"]
+                value_field: "projectTabs.*.id"
+                display_fields: ["projectTabs.*.label"]
+                hint: "Which filter tabs this project shows under"
+          - name: projectTabs
+            label: Filter tabs
+            label_singular: Tab
+            widget: list
+            summary: "{{fields.label}}"
+            hint: "Keep the 'all' tab first; it shows every project."
+            fields:
+              - { name: id, label: ID, widget: string, hint: "Short lowercase key, e.g. embedded" }
+              - { name: label, label: Label, widget: string }
+
+      - name: profile
+        label: Profile & About
+        file: src/data/profile.json
+        format: json
+        fields:
+          - name: personalInfo
+            label: Personal info
+            widget: object
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: resume, label: Resume URL, widget: string }
+              - name: social
+                label: Social links
+                widget: object
+                fields:
+                  - { name: github, label: GitHub, widget: string }
+                  - { name: linkedin, label: LinkedIn, widget: string }
+                  - { name: email, label: "Email (mailto link)", widget: string }
+          - name: aboutMe
+            label: About me
+            widget: object
+            fields:
+              - name: paragraphs
+                label: Paragraphs
+                widget: list
+                field: { name: paragraph, label: Paragraph, widget: text }
+          - name: meLinks
+            label: Me page links
+            widget: object
+            fields:
+              - { name: letterboxdFavorites, label: Letterboxd favorites URL, widget: string }

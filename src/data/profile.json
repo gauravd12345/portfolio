@@ -1,0 +1,20 @@
+{
+  "personalInfo": {
+    "name": "Gaurav Dharmadhikari",
+    "resume": "https://drive.google.com/file/d/1KCbiVcQh0sGPZUXN7g6pr3giOQbvBUpj/view",
+    "social": {
+      "github": "https://github.com/gauravd12345",
+      "linkedin": "https://www.linkedin.com/in/gaurav-dharmadhikari/",
+      "email": "mailto:gauravdharmadhikari2@gmail.com"
+    }
+  },
+  "aboutMe": {
+    "paragraphs": [
+      "I'm passionate about embedded systems and firmware. ",
+      "Outside of tech, I'm also interested in watching movies, playing guitar, and reading books."
+    ]
+  },
+  "meLinks": {
+    "letterboxdFavorites": "https://letterboxd.com/gaurav_d/list/my-favorite-movies/detail/"
+  }
+}

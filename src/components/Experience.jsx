@@ -25,10 +25,10 @@ export default function Experience() {
           <div className="absolute left-3 md:left-6 top-0 bottom-0 w-px bg-gray-200 hidden md:block" />
 
           <div className="space-y-6">
-            {experiences.map((exp) => {
+            {experiences.map((exp, idx) => {
               const logoSrc = getLogoDevImageUrl(exp.logoDomain, logoToken);
               return (
-                <div key={exp.id} className="relative pl-8 md:pl-16">
+                <div key={`${exp.company}-${exp.title}-${idx}`} className="relative pl-8 md:pl-16">
                   <div className="absolute left-3 md:left-6 -translate-x-1/2 top-4 w-3 h-3 rounded-full bg-gray-700 shadow-sm" />
 
                   <div className="bg-white border border-gray-200 rounded-2xl p-4 md:p-5 hover:border-gray-300 transition-colors">

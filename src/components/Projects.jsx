@@ -67,9 +67,9 @@ export default function Projects() {
               No projects in this category yet.
             </p>
           ) : (
-            visibleProjects.map((project) => (
+            visibleProjects.map((project, idx) => (
               <div
-                key={project.id}
+                key={`${project.title}-${idx}`}
                 className="px-6 py-6 rounded-2xl border border-gray-200 bg-white"
               >
                 <div className="flex items-start justify-between gap-6">
@@ -83,7 +83,7 @@ export default function Projects() {
                     </p>
 
                     <div className="mt-3 flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIdx) => (
+                      {(project.tech ?? []).map((tech, techIdx) => (
                         <span
                           key={techIdx}
                           className="text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-full px-3 py-1"
