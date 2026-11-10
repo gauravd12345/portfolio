@@ -1,4 +1,390 @@
 {
+  "projects": [
+    {
+      "visible": true,
+      "title": "Display Module Driver",
+      "description": "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
+      "tech": [
+        "Firmware",
+        "STM32",
+        "Bare-metal",
+        "C",
+        "SPI"
+      ],
+      "github": "https://github.com/gauravd12345/stm32_tft_display_driver",
+      "categories": [
+        "embedded"
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Smart Water Bottle",
+      "description": "Designed a smart water bottle for measuring water intake by interfacing an ultrasonic sensor using an STM32.",
+      "tech": [
+        "Firmware",
+        "STM32",
+        "UART",
+        "I2C"
+      ],
+      "github": "",
+      "categories": [
+        "embedded"
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Temperature & Humidity Sensor",
+      "description": "Interfaced a DHT11 sensor for the ESP32 microcontroller using FreeRTOS and custom GPIO protocol with real-time web monitoring via SSE.",
+      "tech": [
+        "FreeRTOS",
+        "ESP32",
+        "C",
+        "GPIO"
+      ],
+      "github": "https://github.com/gauravd12345/esp32_dht11_driver",
+      "categories": [
+        "embedded"
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Gameboy Emulator",
+      "description": "Created an emulator for the Nintendo Gameboy in C++",
+      "tech": [
+        "C",
+        "C++",
+        "Assembly"
+      ],
+      "github": "https://github.com/gauravd12345/gameboy_emulator",
+      "categories": [
+        "embedded"
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Youtube Video Chatbot",
+      "description": "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
+      "tech": [
+        "React",
+        "Chart.js",
+        "REST API",
+        "Tailwind"
+      ],
+      "github": "https://github.com/gauravd12345/video_query",
+      "categories": [
+        "fullstack"
+      ]
+    },
+    {
+      "visible": true,
+      "title": "wikiGPT",
+      "description": "Built a decoder-only GPT from scratch in PyTorch with multi-head causal self-attention, trained on conversational and QA datasets for chat and question answering.",
+      "tech": [
+        "PyTorch",
+        "Transformers",
+        "GPT",
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/wikiGPT",
+      "categories": [
+        "ai"
+      ]
+    },
+    {
+      "visible": true,
+      "title": "miniCLIP",
+      "description": "Implemented CLIP from scratch in PyTorch and pre-trained it on a smaller dataset for image-text representation learning.",
+      "tech": [
+        "PyTorch",
+        "CLIP",
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/miniCLIP",
+      "categories": [
+        "ai"
+      ]
+    },
+    {
+      "visible": true,
+      "title": "optiML",
+      "description": "optimzed ML algs",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/optiML",
+      "categories": [
+        "ai"
+      ]
+    },
+    {
+      "visible": false,
+      "title": "nfl_prediction_model",
+      "description": "a model to predict NFL match results",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/nfl_prediction_model",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "backprop",
+      "description": "manual backprop",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/backprop",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "food_tracker_ai",
+      "description": "an ai powered food tracker",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/food_tracker_ai",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "driving_safety_assitant",
+      "description": "",
+      "tech": [
+        "HTML"
+      ],
+      "github": "https://github.com/gauravd12345/driving_safety_assitant",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "RL-tic-tac-toe_agent",
+      "description": "Using on-policy MC control to master Tic-Tac-Toe",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/RL-tic-tac-toe_agent",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "eureka",
+      "description": "An AI agent to jot down your ideas whenver, wherever",
+      "tech": [],
+      "github": "https://github.com/gauravd12345/eureka",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "haptic_wristband",
+      "description": "Haptic wristband for speech diagnostics and cues",
+      "tech": [
+        "C"
+      ],
+      "github": "https://github.com/gauravd12345/haptic_wristband",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "computer_vision",
+      "description": "Collection of various Computer Vision(CV) architectures",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/computer_vision",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "real_time_environment_monitoring",
+      "description": "",
+      "tech": [
+        "C"
+      ],
+      "github": "https://github.com/gauravd12345/real_time_environment_monitoring",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "cmpe188hw3",
+      "description": "",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/cmpe188hw3",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "language_models",
+      "description": "Collection of various Language Model(LM) architectures",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/language_models",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "Comparative-Analysis-of-VLA-Architectures",
+      "description": "",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/Comparative-Analysis-of-VLA-Architectures",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "patches_solver",
+      "description": "",
+      "tech": [
+        "JavaScript"
+      ],
+      "github": "https://github.com/gauravd12345/patches_solver",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "nGram",
+      "description": "",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/nGram",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "sherlockGPT",
+      "description": "",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "github": "https://github.com/gauravd12345/sherlockGPT",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "cmpe188-hw1",
+      "description": "",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/cmpe188-hw1",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "sce_take_home_project",
+      "description": "",
+      "tech": [
+        "JavaScript"
+      ],
+      "github": "https://github.com/gauravd12345/sce_take_home_project",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "canvas_dashboard",
+      "description": "Custom dashboard for universities/schools using Canvas LMS",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/canvas_dashboard",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "cmpe131_activity_9",
+      "description": "",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/cmpe131_activity_9",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "cmpe131_hw4",
+      "description": "",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/cmpe131_hw4",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "GitMap",
+      "description": "Discover Github repositories with natural language processing(NLP) and Octokit",
+      "tech": [
+        "JavaScript"
+      ],
+      "github": "https://github.com/gauravd12345/GitMap",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "zip_solver",
+      "description": "DFS-based algorithm that can solve the popular Zip puzzle in real-time.",
+      "tech": [
+        "JavaScript"
+      ],
+      "github": "https://github.com/gauravd12345/zip_solver",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "Wave-Visualization",
+      "description": "This program simulates several kinds of waves(sinusoidal, square, triangle). You acn adjust several variables such as the amplitude, frequency, refresh rate, and more.",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/Wave-Visualization",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "Physics-Based-Simulation-of-Particle-Behavior",
+      "description": "A simulation of particle behavior in an enclosed environment. Laws of physics are used to model particle behavior.",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/Physics-Based-Simulation-of-Particle-Behavior",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "Mandelbrot-Set-Visualization",
+      "description": "Using Matplotlib & Numpy to generate a graph of the Mandelbrot Set. Variables can be tweaked to zoom in/our certain parts of the graph.",
+      "tech": [
+        "Python"
+      ],
+      "github": "https://github.com/gauravd12345/Mandelbrot-Set-Visualization",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "3D-Pacman",
+      "description": "A 3D version of the popular arcade game Pacman",
+      "tech": [
+        "C#"
+      ],
+      "github": "https://github.com/gauravd12345/3D-Pacman",
+      "categories": []
+    },
+    {
+      "visible": false,
+      "title": "rubiks_cube_simulation",
+      "description": "3D interactive simulation of a Rubik's cube built using Java.",
+      "tech": [
+        "Processing"
+      ],
+      "github": "https://github.com/gauravd12345/rubiks_cube_simulation",
+      "categories": []
+    }
+  ],
   "projectTabs": [
     {
       "id": "all",
@@ -15,390 +401,6 @@
     {
       "id": "fullstack",
       "label": "Full Stack"
-    }
-  ],
-  "projects": [
-    {
-      "title": "Display Module Driver",
-      "description": "Developed a bare-metal LCD driver for an STM32 microcontroller with custom bootloader, linker scripts, and SPI communication for embedded graphics.",
-      "tech": [
-        "Firmware",
-        "STM32",
-        "Bare-metal",
-        "C",
-        "SPI"
-      ],
-      "github": "https://github.com/gauravd12345/stm32_tft_display_driver",
-      "categories": [
-        "embedded"
-      ],
-      "visible": true
-    },
-    {
-      "title": "Smart Water Bottle",
-      "description": "Designed a smart water bottle for measuring water intake by interfacing an ultrasonic sensor using an STM32.",
-      "tech": [
-        "Firmware",
-        "STM32",
-        "UART",
-        "I2C"
-      ],
-      "github": "",
-      "categories": [
-        "embedded"
-      ],
-      "visible": true
-    },
-    {
-      "title": "Temperature & Humidity Sensor",
-      "description": "Interfaced a DHT11 sensor for the ESP32 microcontroller using FreeRTOS and custom GPIO protocol with real-time web monitoring via SSE.",
-      "tech": [
-        "FreeRTOS",
-        "ESP32",
-        "C",
-        "GPIO"
-      ],
-      "github": "https://github.com/gauravd12345/esp32_dht11_driver",
-      "categories": [
-        "embedded"
-      ],
-      "visible": true
-    },
-    {
-      "title": "Gameboy Emulator",
-      "description": "Created an emulator for the Nintendo Gameboy in C++",
-      "tech": [
-        "C",
-        "C++",
-        "Assembly"
-      ],
-      "github": "https://github.com/gauravd12345/gameboy_emulator",
-      "categories": [
-        "embedded"
-      ],
-      "visible": true
-    },
-    {
-      "title": "Youtube Video Chatbot",
-      "description": "Created a YouTube chatbot extension using FastAPI, React, and Gemini API for real-time video content Q&A.",
-      "tech": [
-        "React",
-        "Chart.js",
-        "REST API",
-        "Tailwind"
-      ],
-      "github": "https://github.com/gauravd12345/video_query",
-      "categories": [
-        "fullstack"
-      ],
-      "visible": true
-    },
-    {
-      "title": "wikiGPT",
-      "description": "Built a decoder-only GPT from scratch in PyTorch with multi-head causal self-attention, trained on conversational and QA datasets for chat and question answering.",
-      "tech": [
-        "PyTorch",
-        "Transformers",
-        "GPT",
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/wikiGPT",
-      "categories": [
-        "ai"
-      ],
-      "visible": true
-    },
-    {
-      "title": "miniCLIP",
-      "description": "Implemented CLIP from scratch in PyTorch and pre-trained it on a smaller dataset for image-text representation learning.",
-      "tech": [
-        "PyTorch",
-        "CLIP",
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/miniCLIP",
-      "categories": [
-        "ai"
-      ],
-      "visible": true
-    },
-    {
-      "title": "optiML",
-      "description": "optimzed ML algs",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/optiML",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "nfl_prediction_model",
-      "description": "a model to predict NFL match results",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/nfl_prediction_model",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "backprop",
-      "description": "manual backprop",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/backprop",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "food_tracker_ai",
-      "description": "an ai powered food tracker",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/food_tracker_ai",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "driving_safety_assitant",
-      "description": "",
-      "tech": [
-        "HTML"
-      ],
-      "github": "https://github.com/gauravd12345/driving_safety_assitant",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "RL-tic-tac-toe_agent",
-      "description": "Using on-policy MC control to master Tic-Tac-Toe",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/RL-tic-tac-toe_agent",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "eureka",
-      "description": "An AI agent to jot down your ideas whenver, wherever",
-      "tech": [],
-      "github": "https://github.com/gauravd12345/eureka",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "haptic_wristband",
-      "description": "Haptic wristband for speech diagnostics and cues",
-      "tech": [
-        "C"
-      ],
-      "github": "https://github.com/gauravd12345/haptic_wristband",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "computer_vision",
-      "description": "Collection of various Computer Vision(CV) architectures",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/computer_vision",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "real_time_environment_monitoring",
-      "description": "",
-      "tech": [
-        "C"
-      ],
-      "github": "https://github.com/gauravd12345/real_time_environment_monitoring",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "cmpe188hw3",
-      "description": "",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/cmpe188hw3",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "language_models",
-      "description": "Collection of various Language Model(LM) architectures",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/language_models",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "Comparative-Analysis-of-VLA-Architectures",
-      "description": "",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/Comparative-Analysis-of-VLA-Architectures",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "patches_solver",
-      "description": "",
-      "tech": [
-        "JavaScript"
-      ],
-      "github": "https://github.com/gauravd12345/patches_solver",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "nGram",
-      "description": "",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/nGram",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "sherlockGPT",
-      "description": "",
-      "tech": [
-        "Jupyter Notebook"
-      ],
-      "github": "https://github.com/gauravd12345/sherlockGPT",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "cmpe188-hw1",
-      "description": "",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/cmpe188-hw1",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "sce_take_home_project",
-      "description": "",
-      "tech": [
-        "JavaScript"
-      ],
-      "github": "https://github.com/gauravd12345/sce_take_home_project",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "canvas_dashboard",
-      "description": "Custom dashboard for universities/schools using Canvas LMS ",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/canvas_dashboard",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "cmpe131_activity_9",
-      "description": "",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/cmpe131_activity_9",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "cmpe131_hw4",
-      "description": "",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/cmpe131_hw4",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "GitMap",
-      "description": "Discover Github repositories with natural language processing(NLP) and Octokit",
-      "tech": [
-        "JavaScript"
-      ],
-      "github": "https://github.com/gauravd12345/GitMap",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "zip_solver",
-      "description": "DFS-based algorithm that can solve the popular Zip puzzle in real-time.",
-      "tech": [
-        "JavaScript"
-      ],
-      "github": "https://github.com/gauravd12345/zip_solver",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "Wave-Visualization",
-      "description": "This program simulates several kinds of waves(sinusoidal, square, triangle). You acn adjust several variables such as the amplitude, frequency, refresh rate, and more. ",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/Wave-Visualization",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "Physics-Based-Simulation-of-Particle-Behavior",
-      "description": "A simulation of particle behavior in an enclosed environment. Laws of physics are used to model particle behavior. ",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/Physics-Based-Simulation-of-Particle-Behavior",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "Mandelbrot-Set-Visualization",
-      "description": "Using Matplotlib & Numpy to generate a graph of the Mandelbrot Set. Variables can be tweaked to zoom in/our certain parts of the graph. ",
-      "tech": [
-        "Python"
-      ],
-      "github": "https://github.com/gauravd12345/Mandelbrot-Set-Visualization",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "3D-Pacman",
-      "description": "A 3D version of the popular arcade game Pacman",
-      "tech": [
-        "C#"
-      ],
-      "github": "https://github.com/gauravd12345/3D-Pacman",
-      "categories": [],
-      "visible": false
-    },
-    {
-      "title": "rubiks_cube_simulation",
-      "description": "3D interactive simulation of a Rubik's cube built using Java.",
-      "tech": [
-        "Processing"
-      ],
-      "github": "https://github.com/gauravd12345/rubiks_cube_simulation",
-      "categories": [],
-      "visible": false
     }
   ]
 }
