@@ -4,4 +4,5 @@ import projectData from './projects.json';
 
 export const { personalInfo, aboutMe, meLinks } = profile;
 export const { experiences } = experienceData;
-export const { projectTabs, projects } = projectData;
+export const { projectTabs } = projectData;
+export const projects = projectData.projects.filter((p) => p.visible !== false);

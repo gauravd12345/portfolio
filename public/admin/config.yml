@@ -51,13 +51,16 @@ collections:
             label_singular: Project
             widget: list
             add_to_top: true
-            summary: "{{fields.title}}"
+            summary: "{{fields.visible | ternary('✅', '⬜')}} {{fields.title}}"
+            hint: "✅ = shown on the site. New GitHub repos are added here automatically as hidden (⬜)."
             fields:
+              - { name: visible, label: Show on portfolio, widget: boolean, default: true }
               - { name: title, label: Title, widget: string }
-              - { name: description, label: Description, widget: text }
+              - { name: description, label: Description, widget: text, required: false }
               - name: tech
                 label: Tech tags
                 widget: list
+                required: false
                 field: { name: tag, label: Tag, widget: string }
               - { name: github, label: GitHub URL, widget: string, required: false, default: "" }
               - name: categories
@@ -66,6 +69,7 @@ collections:
                 collection: content
                 file: projects
                 multiple: true
+                required: false
                 search_fields: ["projectTabs.*.id"]
                 value_field: "projectTabs.*.id"
                 display_fields: ["projectTabs.*.label"]

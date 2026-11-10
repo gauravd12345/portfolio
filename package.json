@@ -12,6 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "sync:github": "node scripts/sync-github-projects.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
