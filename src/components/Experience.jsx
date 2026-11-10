@@ -1,6 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { experiences } from '../data/portfolioData';
-import { getLogoDevImageUrl } from '../utils/logoDev';
+import { getCompanyLogoSources } from '../utils/logoDev';
+
+function CompanyLogo({ company, sources }) {
+  const [sourceIdx, setSourceIdx] = useState(0);
+  const src = sources[sourceIdx];
+
+  return (
+    <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-white">
+      {src ? (
+        <img
+          src={src}
+          alt={`${company} logo`}
+          width={48}
+          height={48}
+          className="h-full w-full object-contain p-1"
+          loading="lazy"
+          decoding="async"
+          referrerPolicy="no-referrer"
+          onError={() => setSourceIdx((i) => i + 1)}
+        />
+      ) : (
+        <span className="text-lg font-semibold text-gray-500" aria-hidden="true">
+          {company?.charAt(0) ?? ''}
+        </span>
+      )}
+    </div>
+  );
+}
 
 export default function Experience() {
   const logoToken = process.env.REACT_APP_LOGO_DEV_TOKEN;
@@ -26,7 +53,6 @@ export default function Experience() {
 
           <div className="space-y-6">
             {experiences.map((exp, idx) => {
-              const logoSrc = getLogoDevImageUrl(exp.logoDomain, logoToken);
               return (
                 <div key={`${exp.company}-${exp.title}-${idx}`} className="relative pl-8 md:pl-16">
                   <div className="absolute left-3 md:left-6 -translate-x-1/2 top-4 w-3 h-3 rounded-full bg-gray-700 shadow-sm" />
@@ -35,20 +61,10 @@ export default function Experience() {
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                       <div className="min-w-0 flex-1">
                         <div className="flex items-start gap-3">
-                          {logoSrc ? (
-                            <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center p-1.5">
-                              <img
-                                src={logoSrc}
-                                alt={`${exp.company} logo`}
-                                width={48}
-                                height={48}
-                                className="h-full w-full object-contain"
-                                loading="lazy"
-                                decoding="async"
-                                referrerPolicy="no-referrer"
-                              />
-                            </div>
-                          ) : null}
+                          <CompanyLogo
+                            company={exp.company}
+                            sources={getCompanyLogoSources(exp, logoToken)}
+                          />
                           <div className="min-w-0 flex-1 flex flex-col justify-center leading-tight">
                             <p className="text-gray-900 font-semibold text-base md:text-lg">
                               {exp.company}

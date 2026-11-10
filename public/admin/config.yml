@@ -34,7 +34,12 @@ collections:
                 label: Company website domain
                 widget: string
                 required: false
-                hint: "Used to fetch the logo, e.g. rivian.com"
+                hint: "Used to fetch the logo automatically, e.g. rivian.com"
+              - name: logo
+                label: Logo image
+                widget: image
+                required: false
+                hint: "Optional. Upload a logo to use instead of the automatic one (square images look best)."
 
       - name: projects
         label: Projects
