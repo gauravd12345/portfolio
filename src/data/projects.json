@@ -383,6 +383,16 @@
       ],
       "github": "https://github.com/gauravd12345/rubiks_cube_simulation",
       "categories": []
+    },
+    {
+      "title": "portfolio",
+      "description": "",
+      "tech": [
+        "JavaScript"
+      ],
+      "github": "https://github.com/gauravd12345/portfolio",
+      "categories": [],
+      "visible": false
     }
   ],
   "projectTabs": [
